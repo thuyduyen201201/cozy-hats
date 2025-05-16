@@ -28,8 +28,8 @@ header {
 }
 
 .logo {
-  text-decoration: none; /* remove underline */
-  color: inherit; /* use the header text color (e.g. white) */
+  text-decoration: none;
+  color: inherit;
   display: inline-block;
 }
 
@@ -221,7 +221,8 @@ nav a:hover {
 }
 
 .product-card img {
-  width: 100%;
+  width: 250px;
+  height: 250px;
   border-radius: 5px;
 }
 
