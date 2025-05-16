@@ -231,8 +231,22 @@ nav a:hover {
 }
 
 .btn.small {
-  padding: 8px 15px;
-  font-size: 14px;
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn.small:hover {
+  background-color: #e0533b;
+  transform: translateY(-2px);
 }
 
 .about-store {
