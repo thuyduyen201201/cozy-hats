@@ -55,7 +55,7 @@ nav a {
 }
 
 nav a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 /* Slider Container */
@@ -377,4 +377,36 @@ footer {
   text-align: center;
   padding: 20px 0;
   margin-top: 40px;
+}
+
+/* Back to Top Button */
+.go-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: #222;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  z-index: 999;
+}
+
+.go-top:hover {
+  background-color: #ff6347;
+  transform: translateY(-3px);
+}
+
+.go-top svg {
+  width: 22px;
+  height: 22px;
+  stroke: white;
 }
