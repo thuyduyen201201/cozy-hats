@@ -2,193 +2,304 @@
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cozy Hats - Trang Chủ</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Portfolio Nguyễn Thị Thuỳ Duyên</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="./aos.css" rel="stylesheet" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Montserrat", Arial, sans-serif;
+        background: #19171d;
+        color: #fff;
+      }
+      .header {
+        width: 100vw;
+        background: linear-gradient(90deg, #fae1f6 0%, #c3eaf8 100%);
+        color: #363244;
+        text-align: center;
+        padding: 30px 0 10px 0;
+        box-shadow: 0 2px 20px #0002;
+        letter-spacing: 3px;
+        font-size: 1.5em;
+        font-weight: 800;
+      }
+      .main-title {
+        margin-top: 36px;
+        margin-bottom: 0;
+        text-align: center;
+        font-size: 3.2em;
+        font-weight: bold;
+        color: #fff;
+        letter-spacing: 2px;
+        text-shadow: 2px 2px 14px #eb9bf6cc;
+      }
+      .sub-title {
+        text-align: center;
+        font-size: 1.5em;
+        margin-top: 10px;
+        margin-bottom: 36px;
+        color: #b9ebf4;
+        font-weight: 500;
+      }
+      .avatar {
+        display: block;
+        margin: 0 auto 22px auto;
+        width: 170px;
+        height: 170px;
+        border-radius: 50%;
+        border: 5px solid #fff;
+        background: #fff;
+        box-shadow: 0 4px 20px #ecabf755;
+        object-fit: cover;
+        transition: transform 0.18s;
+      }
+      .avatar:hover {
+        transform: scale(1.04) rotate(-3deg);
+        box-shadow: 0 8px 28px #ae53cdb2;
+      }
+      .section {
+        background: #24202b;
+        margin: 38px 0;
+        padding: 38px 0 32px 0;
+        border-radius: 22px;
+        width: 92vw;
+        max-width: 960px;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0 2px 40px #0002;
+        position: relative;
+      }
+      .section-title {
+        font-size: 2.3em;
+        font-weight: bold;
+        background: linear-gradient(90deg, #ffe3fa 10%, #d6f8fc 100%);
+        color: #2e243c;
+        padding: 14px 0 14px 34px;
+        border-radius: 8px 26px 26px 8px;
+        margin-bottom: 22px;
+        margin-left: 0;
+        margin-right: 0;
+        box-shadow: 0 3px 10px #a5e3f244;
+        border-left: 5px solid #ee7ee2;
+        letter-spacing: 2px;
+        text-align: left;
+        width: 99%;
+      }
+      .about-info {
+        margin: 0 0 15px 0;
+        font-size: 1.18em;
+        line-height: 1.7;
+        text-align: center;
+        color: #f6e2fa;
+      }
+      .caption {
+        background: linear-gradient(90deg, #f9e1f7 30%, #b6eaf5 100%);
+        color: #482c4b;
+        display: inline-block;
+        padding: 9px 22px;
+        border-radius: 11px;
+        font-size: 1em;
+        margin-top: 18px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        box-shadow: 0 2px 14px #a4e4f255;
+        margin-bottom: 8px;
+      }
+      .simple-list {
+        padding-left: 2.2em;
+        font-size: 1.07em;
+        color: #dbeaf8;
+        margin-bottom: 0;
+        margin-top: 0;
+      }
+      .simple-list li {
+        margin-bottom: 7px;
+      }
+      .products-imgs {
+        text-align: center;
+      }
+      .products-imgs img {
+        width: 145px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 16px;
+        margin: 6px 12px 10px 12px;
+        border: 3px solid #fff;
+        box-shadow: 0 2px 18px #eed2f8aa;
+        transition: 0.16s;
+      }
+      .products-imgs img:hover {
+        transform: scale(1.05) rotate(-2deg);
+        border-color: #ee7ee2;
+        box-shadow: 0 2px 28px #ee7ee2aa;
+      }
+      .progress-bar {
+        background-color: #3a3842;
+        border-radius: 10px;
+        overflow: hidden;
+        height: 12px;
+        margin: 10px 32px 20px;
+        box-shadow: inset 0 1px 3px #00000055;
+      }
+      .progress {
+        height: 100%;
+        background: linear-gradient(to right, #ee7ee2, #9adcf2);
+        width: 0;
+        border-radius: 10px;
+        position: relative;
+        transition: width 1.2s ease-out;
+      }
+      .progress-label {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #fff;
+        font-size: 0.85em;
+        font-weight: 600;
+      }
+
+      @media (max-width: 700px) {
+        .section {
+          width: 99vw;
+          padding: 17px 0 19px 0;
+        }
+        .section-title {
+          font-size: 1.2em;
+          padding-left: 14px;
+        }
+        .avatar {
+          width: 96px;
+          height: 96px;
+        }
+        .main-title {
+          font-size: 2em;
+        }
+        .sub-title {
+          font-size: 1em;
+        }
+        .products-imgs img {
+          width: 90px;
+          height: 120px;
+        }
+      }
+    </style>
   </head>
   <body>
-    <header>
-      <div class="container">
-        <a href="index.html" class="logo">
-          <h1>Cửa Hàng Mũ Cozy Hats</h1>
-        </a>
-        <nav>
-          <a href="index.html">Trang Chủ</a>
-          <a href="#gioithieu">Giới Thiệu</a>
-          <a href="lienhe.html">Liên Hệ</a>
-        </nav>
+    <div class="header">PORTFOLIO</div>
+    <div class="main-title">Nguyễn Thị Thuỳ Duyên</div>
+    <div class="sub-title">
+      Sinh viên thiết kế | Yêu sáng tạo | Đam mê cái đẹp
+    </div>
+
+    <div class="section">
+      <div class="section-title">Giới thiệu bản thân</div>
+      <img class="avatar" src="./avatar.jpg" alt="Avatar của Duyên" />
+      <div class="about-info">
+        Xin chào, mình là <b>Nguyễn Thị Thuỳ Duyên</b> – một sinh viên đam mê
+        thiết kế đồ họa.<br />
+        Mình thích kể chuyện bằng hình ảnh, muốn mọi thứ trở nên tươi vui và
+        sáng tạo hơn!
       </div>
-    </header>
-
-    <section class="slider">
-      <input type="radio" name="slide" id="slide1" />
-      <input type="radio" name="slide" id="slide2" checked />
-      <input type="radio" name="slide" id="slide3" />
-
-      <div class="slides">
-        <div class="slide s1">
-          <img src="images/slide1.jpg" alt="Slide 1" />
-          <div class="hero-content">
-            <h2>Những Chiếc Mũ Phong Cách và Thời Thượng</h2>
-            <p>Khám phá bộ sưu tập mũ cao cấp cho mọi mùa trong năm.</p>
-            <a href="#sanpham" class="btn">Xem Sản Phẩm</a>
-          </div>
-        </div>
-        <div class="slide s2">
-          <img src="images/slide2.jpg" alt="Slide 2" />
-        </div>
-        <div class="slide s3">
-          <img src="images/slide3.jpg" alt="Slide 3" />
-        </div>
+      <div style="text-align: center">
+        <b>Ngày sinh:</b> 20/12/2001 &nbsp; | &nbsp; <b>Trường:</b> Đại học Văn
+        Lang
       </div>
+    </div>
 
-      <div class="navigation">
-        <label for="slide1"></label>
-        <label for="slide2"></label>
-        <label for="slide3"></label>
-      </div>
-    </section>
-
-    <section class="products" id="sanpham">
-      <div class="container">
-        <h3>Sản Phẩm Theo Mùa</h3>
-
-        <!-- Mùa Xuân -->
-        <h4>Mùa Xuân</h4>
-        <div class="product-grid">
-          <div class="product-card">
-            <img src="images/mũ lưỡi trai ( màu ).jpg" alt="Mũ Lưỡi Trai Hoa" />
-            <h4>Mũ Lưỡi Trai Hoa Văn</h4>
-            <p class="price">320.000₫</p>
-            <a href="#" class="btn small">Xem Chi Tiết</a>
-          </div>
-          <div class="product-card">
-            <img src="images/mufedora.jpg" alt="Mũ Fedora Sọc" />
-            <h4>Mũ Fedora Sọc Nhẹ</h4>
-            <p class="price">410.000₫</p>
-            <a href="#" class="btn small">Xem Chi Tiết</a>
-          </div>
-          <div class="product-card">
-            <img src="images/mũ lưới.jpg" alt="Mũ Lưới Thoáng" />
-            <h4>Mũ Lưới Thoáng Khí</h4>
-            <p class="price">280.000₫</p>
-            <a href="#" class="btn small">Xem Chi Tiết</a>
+    <div class="section" id="skills">
+      <div class="section-title">Kỹ năng</div>
+      <div class="simple-list">
+        <div>Thiết kế poster & banner</div>
+        <div class="progress-bar">
+          <div class="progress" data-percent="85">
+            <span class="progress-label">0%</span>
           </div>
         </div>
 
-        <!-- Mùa Hè -->
-        <h4>Mùa Hè</h4>
-        <div class="product-grid">
-          <div class="product-card">
-            <img src="images/mũ cối.jpg" alt="Mũ Rơm Du Lịch" /> //
-            <h4>Mũ Rơm Du Lịch</h4>
-            <p class="price">300.000₫</p>
-            <a href="#" class="btn small">Xem Chi Tiết</a>
-          </div>
-          <div class="product-card">
-            <img src="images/mũ basic.jpg" alt="Mũ Lưỡi Trai Basic" />
-            //
-            <h4>Mũ Lưỡi Trai Basic</h4>
-            <p class="price">250.000₫</p>
-            <a href="#" class="btn small">Xem Chi Tiết</a>
-          </div>
-          <div class="product-card">
-            <img src="images/mũ rộng vành.jpg" alt="Mũ Vành Rộng" />
-            <h4>Mũ Vành Rộng Chống Nắng</h4>
-            <p class="price">330.000₫</p>
-            <a href="#" class="btn small">Xem Chi Tiết</a>
+        <div>Chỉnh sửa ảnh cơ bản</div>
+        <div class="progress-bar">
+          <div class="progress" data-percent="70">
+            <span class="progress-label">0%</span>
           </div>
         </div>
 
-        <!-- Mùa Thu -->
-        <h4>Mùa Thu</h4>
-        <div class="product-grid">
-          <div class="product-card">
-            <img src="images/mũ nỉ cổ điển.jpg" alt="Mũ Beret Nỉ" />
-            <h4>Mũ Beret Nỉ Cổ Điển</h4>
-            <p class="price">370.000₫</p>
-            <a href="#" class="btn small">Xem Chi Tiết</a>
-          </div>
-          <div class="product-card">
-            <img
-              src="images/mũ nồi phong cách copy.jpg"
-              alt="Mũ Nồi Thời Trang"
-            />
-            <h4>Mũ Nồi Phong Cách</h4>
-            <p class="price">340.000₫</p>
-            <a href="#" class="btn small">Xem Chi Tiết</a>
-          </div>
-          <div class="product-card">
-            <img src="images/mũ len.jpg" alt="Mũ Len Nhẹ" />
-            <h4>Mũ Len Nhẹ Mùa Thu</h4>
-            <p class="price">300.000₫</p>
-            <a href="#" class="btn small">Xem Chi Tiết</a>
+        <div>Trình bày slide đẹp</div>
+        <div class="progress-bar">
+          <div class="progress" data-percent="80">
+            <span class="progress-label">0%</span>
           </div>
         </div>
 
-        <!-- Mùa Đông -->
-        <h4>Mùa Đông</h4>
-        <div class="product-grid">
-          <div class="product-card">
-            <img src="images/mũ len lông cừu copy.jpg" alt="Mũ Len Lông Cừu" />
-            <h4>Mũ Len Lông Cừu</h4>
-            <p class="price">390.000₫</p>
-            <a href="#" class="btn small">Xem Chi Tiết</a>
-          </div>
-          <div class="product-card">
-            <img src="images/mũ che tai.jpg" alt="Mũ Trùm Tai" />
-            <h4>Mũ Trùm Tai Giữ Ấm</h4>
-            <p class="price">420.000₫</p>
-            <a href="#" class="btn small">Xem Chi Tiết</a>
-          </div>
-          <div class="product-card">
-            <img src="images/mũ nỉ.jpg" alt="Mũ Nỉ Trơn" />
-            <h4>Mũ Nỉ Trơn Màu Tối</h4>
-            <p class="price">360.000₫</p>
-            <a href="#" class="btn small">Xem Chi Tiết</a>
+        <div>Làm việc nhóm, giao tiếp tốt</div>
+        <div class="progress-bar">
+          <div class="progress" data-percent="90">
+            <span class="progress-label">0%</span>
           </div>
         </div>
       </div>
-    </section>
+      <div class="caption">Luôn muốn học hỏi thêm nhiều điều mới!</div>
+    </div>
 
-    <section class="about-store" id="gioithieu">
-      <div class="container">
-        <h3>Giới Thiệu Cửa Hàng</h3>
-        <p>
-          Cửa Hàng Mũ tự hào mang đến những mẫu mũ thời trang và chất lượng cho
-          mọi mùa trong năm. Chúng tôi luôn cập nhật xu hướng mới nhất để giúp
-          bạn thể hiện phong cách riêng.
-        </p>
-        <p>
-          Sản phẩm của chúng tôi được chọn lọc kỹ lưỡng, phù hợp với cả nhu cầu
-          hàng ngày và các dịp đặc biệt. Giao hàng toàn quốc – Đổi trả dễ dàng –
-          Hỗ trợ tận tình!
-        </p>
-        <a href="lienhe.html" class="btn">Liên hệ với chúng tôi</a>
+    <div class="section">
+      <div class="section-title">Phần mềm sử dụng</div>
+      <ul class="simple-list">
+        <li>Canva</li>
+        <li>PowerPoint</li>
+        <li>Paint</li>
+        <li>Adobe Photoshop</li>
+        <li>Adobe Illustrator</li>
+        <li>Adobe Indesign</li>
+        <li>Adobe Dreamweaver</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Một vài sản phẩm</div>
+      <div class="products-imgs">
+        <img src="./mockupdoan.jpg" alt="Poster mẫu" />
+        <img src="./mockupids.jpg" alt="Ảnh thiết kế" />
+        <img src="./mockupspa.jpg" alt="Ảnh thiết kế" />
       </div>
-    </section>
+      <div class="caption">Tất cả đều là trải nghiệm đầu tay!</div>
+    </div>
 
-    <footer>
-      <div class="container">
-        <p>© 2025 Cửa Hàng Mũ • Bản quyền thuộc về chúng tôi.</p>
+    <div class="section" style="text-align: center">
+      <div class="section-title">Cảm ơn đã xem Portfolio của mình!</div>
+      <div style="margin-top: 10px; font-size: 1.2em; color: #f5d6f7">
+        Hẹn gặp lại ở những bài thiết kế sau nhé 💖
       </div>
-    </footer>
+    </div>
 
-    <a href="#" class="go-top" title="Lên đầu trang">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-        <path
-          d="M12 4L12 20"
-          stroke="white"
-          stroke-width="2"
-          stroke-linecap="round"
-        />
-        <path
-          d="M5 11L12 4L19 11"
-          stroke="white"
-          stroke-width="2"
-          stroke-linecap="round"
-        />
-      </svg>
-    </a>
+    <script>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const progressBars = document.querySelectorAll(".progress");
+              progressBars.forEach((bar) => {
+                const percent = +bar.dataset.percent;
+                bar.style.width = percent + "%";
+
+                const label = bar.querySelector(".progress-label");
+                let count = 0;
+                const timer = setInterval(() => {
+                  if (count <= percent) {
+                    label.textContent = count + "%";
+                    count++;
+                  } else {
+                    clearInterval(timer);
+                  }
+                }, 20);
+              });
+            }
+          });
+        },
+        { threshold: 0.5 }
+      );
+
+      observer.observe(document.getElementById("skills"));
+    </script>
   </body>
 </html>
